@@ -146,19 +146,19 @@ class Config
         add_action('wp_head', function () {
             // Add tag manager Script
             if (\WP_ENV == 'production') {
-                echo NU::gtmScript();
+                echo \Northeastern\Support\Analytics::googleTagManagerScript();
             }
 
-            // Marketing's favicons
-            echo NU::headMeta();
+            // echo meta head assets
+            echo \Northeastern\Support\Meta::head();
 
-            // Add Lato font
-            echo '<link href="//fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900" rel="stylesheet">';
-
-            // Add chrome style
-            if (get_field('bool_chrome_header', 'option') || get_field('bool_chrome_footer', 'option')) {
-                echo '<link rel="stylesheet" href="' .NU::chromeStyle(). '">';
-            }
+            // echo global elements assets
+            echo '
+                <script src="https://unpkg.com/@northeastern-web/global-elements@latest/dist/js/index.umd.js" defer></script>
+                <link rel="stylesheet" href="https://unpkg.com/@northeastern-web/global-elements@latest/dist/css/index.css">
+                <script src="https://unpkg.com/@northeastern-web/kernl-ui@latest/dist/js/index.umd.js" defer></script>
+                <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900" rel="stylesheet">
+            ';
         }, 1);
 
         // wp_head with priority 20
@@ -182,17 +182,12 @@ class Config
         add_action('wp_body_open', function () {
             // Add tag manager NoScript
             if (\WP_ENV == 'production') {
-                echo NU::gtmNoScript();
+                echo \Northeastern\Support\Analytics::googleTagManagerNoScript();
             }
 
             // Add skip to main content
             echo '
-                <a class="skip alert" href="#main_content">Skip to main content</a>
-                <!--[if IE]>
-                <div class="bg--beige fs--sm pa--1 pa--2@d">
-                    <b><i>Note</i></b>: You are using an <strong>outdated</strong> browser. Please <a class="tc--red" href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-                </div>
-                <![endif]-->
+                <div x-data="NUGlobalElements.header({ skipToMainSelector: \'#main\' })" x-init="init()" style="height: 48px; background-color: black"></div>
             ';
         });
 
@@ -204,13 +199,11 @@ class Config
             }
 
             // Add chrome script
-            if (get_field('bool_chrome_header', 'option') || get_field('bool_chrome_footer', 'option')) {
-                echo '<script src="' .NU::chromeScript(). '"></script>';
-            }
+            echo '<div x-data="NUGlobalElements.footer()" x-init="init()"></div>';
 
             // Add google analytics tracker
             if (\WP_ENV == 'production' && get_field('txt_analytics', 'option')) {
-                echo NU::googleAnalytics(get_field('txt_analytics', 'option'));
+                // echo NU::googleAnalytics(get_field('txt_analytics', 'option'));
             }
         });
     }
