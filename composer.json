@@ -1,15 +1,12 @@
 {
-  "name": "nupods/kernl-theme-lib",
-  "homepage": "https://assets.provost.northeastern.edu/kernl",
+  "name": "northeastern-web/kernl-theme-lib",
+  "description": "Support library for kernl-theme 1.3",
   "authors": [
     {
-      "name": "NU PODS",
-      "email": "provost-digital@northeastern.edu"
+      "name": "NU Web Solutions",
+      "email": "websolutions@northeastern.edu"
     }
   ],
-  "support": {
-    "documentation": "https://assets.provost.northeastern.edu/kernl"
-  },
   "autoload": {
     "psr-4": {
       "Kernl\\Lib\\": "src/"
