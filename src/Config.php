@@ -39,7 +39,6 @@ class Config
         new ShortcodePosts;
         new ShortcodeVideo;
         new ShortcodeWufoo;
-        new TinyMCE;
     }
 
     /**
@@ -127,7 +126,7 @@ class Config
         // admin_enqueue_scripts
         add_action('admin_enqueue_scripts', function () {
             // Add custom stylesheet to wp-admin
-            wp_enqueue_style('admin-styles', get_stylesheet_directory_uri().'/../vendor/nupods/kernl-lib-wp/src/assets/styles/wp-admin.css');
+            wp_enqueue_style('admin-styles', get_stylesheet_directory_uri().'/../vendor/northeastern-web/kernl-lib-wp/src/assets/styles/wp-admin.css');
         });
 
         // wp_dashboard_setup

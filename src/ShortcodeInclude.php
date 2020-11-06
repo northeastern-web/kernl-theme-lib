@@ -11,7 +11,6 @@ class ShortcodeInclude
     public function __construct()
     {
         $this->shortcodeInclude();
-        $this->addTinyMCE();
     }
 
     /**
@@ -52,54 +51,6 @@ class ShortcodeInclude
 
                 return $content;
             }
-        });
-    }
-
-    /**
-     * Add button to TinyMCE
-     * @return void
-     */
-    protected function addTinyMCE()
-    {
-        global $typenow;
-
-        // Create button and add JS
-        add_action('admin_head', function () {
-            if (!current_user_can('edit_posts') && !current_user_can('edit_pages')) {
-                return;
-            }
-
-            // Create TinyMCE button
-            add_filter('mce_buttons', function ($buttons) {
-                array_push($buttons, 'includes_button');
-                return $buttons;
-            });
-
-            add_filter("mce_external_plugins", function ($plugin_array) {
-                $file = get_stylesheet_directory_uri() . '/../vendor/nupods/kernl-lib-wp/src/assets/scripts/tinymce-include.js';
-                $plugin_array['add_script'] = $file;
-                return $plugin_array;
-            });
-        });
-
-        // Send include list (may need to replicate for wp_ajax_nopriv_includes_request)
-        add_action('wp_ajax_includes_request', function () {
-            $dir = get_stylesheet_directory() .'/views/**/*.php';
-            $files = glob($dir);
-            $list = [];
-
-            foreach ($files as $file) {
-                $template = $this->getFileDocBlock($file);
-                $filepath = substr($file, strpos($file, get_stylesheet_directory()) + strlen(get_stylesheet_directory()));
-                if ($template) {
-                    $list[] = [
-                        'text' =>   $template[1],
-                        'value' =>  str_replace("/views/", "", $filepath)
-                    ];
-                }
-            }
-
-            wp_send_json($list);
         });
     }
 
