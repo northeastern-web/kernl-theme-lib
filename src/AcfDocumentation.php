@@ -25,7 +25,7 @@ class AcfDocumentation
         add_action('wp_loaded', function () {
             $docs = new FieldsBuilder('docs');
             $docs
-                ->addMessage('Welcome to kernl(wp)', 'We hope you find this theme easy to use. Please see <a href="https://assets.provost.northeastern.edu/kernl/wp/">kernl(docs)</a> for detailed documentation.');
+                ->addMessage('Welcome to kernl(theme)', 'We hope you find this theme easy to use. Please see <a href="https://assets.provost.northeastern.edu/kernl/wp/">kernl(docs)</a> for detailed documentation.');
 
             // Build the customize page
             $documentation = new FieldsBuilder('documentation', ['title' => 'Customize', 'style' => 'seamless']);

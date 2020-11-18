@@ -29,13 +29,13 @@ class Config
         new Articles;
         new Profiles;
         new Navigation;
-        new Modules;
+        // new Modules;
         new ShortcodeAuth;
         new ShortcodeComponent;
         new ShortcodeIcon;
         new ShortcodeInclude;
         new ShortcodeMailchimp;
-        new ShortcodeModule;
+        // new ShortcodeModule;
         new ShortcodePosts;
         new ShortcodeVideo;
         new ShortcodeWufoo;
@@ -101,7 +101,7 @@ class Config
         add_action('admin_menu', function () {
             // Add ACF Options menus
             acf_add_options_page([
-                'page_title'  => 'Kernl(WP) Documentation',
+                'page_title'  => 'kernl(theme) Documentation',
                 'menu_title'  => 'Documentation',
                 'capability'  => 'edit_posts',
                 'position'    => '2.1',
