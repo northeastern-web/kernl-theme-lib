@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i');
+
+#wp-admin-bar-wp-logo,
+#wp-admin-bar-comments,
+#wp-admin-bar-wpseo-menu { display: none; }
+
+#login {
+    width: 400px;
+}
+
+.login h1 a {
+  /* height: 75px; */
+  width: 100%;
+  margin: 0 auto 25px;
+  padding: 45px 0 0px;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  line-height: 1.3em;
+  text-decoration: none;
+  text-indent: 0;
+  overflow: hidden;
+  display: block;
+  background-image: url('http://www.northeastern.edu/images/logo.png');
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
+.layout-sections {}
+.layout-sections .acf-button { background: #000; border: none; text-shadow: none; box-shadow: none; }
+.layout-sections > .acf-label { font-size: 110%; text-transform: uppercase; }
+.layout-sections .acf-flexible-content .layout { background: #f0f0f0; }
+.layout-sections .acf-tab-button { font-size: 12px; }
+.layout-sections .acf-repeater .acf-row > td { border-bottom: 10px solid #d8d8d8; }
+
+.layout-grid .acf-actions li {}
+
+.layout-content .acf-actions li { float: none; text-align: left; }
+
+.layout-columns .acf-row > td { border-bottom: 3px solid #d8d8d8; }
+.layout-columns .acf-button { background: #5f5f5f; }
+
+.layout-content .acf-button { background: #d8d8d8; color: #333; }
+
+.acf-field-message { padding-top: 30px !important; }
+.acf-field-message .acf-label {
+  margin: 0 !important;
+  padding: 10px 12px !important;
+  background: #23282d !important;
+  color: #fff !important;
+  font-size: 110%;
+}
+.acf-field-message .acf-label + .acf-input { background: #fff; }
+.acf-field-message .acf-label + .acf-input p { margin: 0; padding: 12px; }
+
+.acf-fields .acf-field-taxonomy { min-height: 110px !important; }
+
+.kernl-section .acf-repeater .acf-row-handle.order {
+  padding: 3px 1px;
+  vertical-align: top !important;
+  text-shadow: none !important;
+  color: #000 !important;
+  font-size: 11px;
+  font-weight: bold;
+  background: #F9F9F9 !important;
+  border-width: 1px 0 0 !important;
+}
+
+.kernl-section .button.disabled { display: none; }
+
+.kernl-section .m--left > .acf-input > .acf-flexible-content > .acf-actions li,
+.kernl-section .m--left > .acf-input > .acf-repeater > .acf-actions li { float: left; }
+.kernl-section .m--left > .acf-input > .acf-flexible-content > .acf-actions li a,
+.kernl-section .m--left > .acf-input > .acf-repeater > .acf-actions li a {
+  color: #555;
+  border-color: #cccccc;
+  background: #f7f7f7;
+  box-shadow: 0 1px 0 #cccccc;
+  text-shadow: none;
+}
+
+.kernl-section .m--right > .acf-input > .acf-flexible-content > .acf-actions li,
+.kernl-section .m--right > .acf-input > .acf-repeater > .acf-actions li { float: right; }
+
+.kernl-section__msg {
+  margin-left: -3px !important;
+  padding: 0px !important;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.kernl-section__row .acf-repeater .acf-row-handle.order {
+  display: none;
+}
+.kernl-section__msg .acf-label {
+  padding: 3px 0 1px !important;
+  background: #F9F9F9 !important;
+  color: #000 !important;
+}
+
+.kernl-accordion__shade .acf-accordion-title { background: #f6f6f6; }
+
+.kernl--code {
+  padding: 25px !important;
+  background: #000;
+  color: #ddd;
+  font-family: Consolas, Monaco, monospace;
+}
+
+.kernl--code::selection { background: #99a3b0; }

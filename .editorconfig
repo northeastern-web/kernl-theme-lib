@@ -1,0 +1,4 @@
+# editorconfig.org
+
+[*.php]
+indent_size = 4
