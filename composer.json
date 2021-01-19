@@ -1,10 +1,10 @@
 {
-  "name": "nupods/kernl-theme-lib",
+  "name": "northeastern-web/kernl-theme-lib",
   "homepage": "https://assets.provost.northeastern.edu/kernl",
   "authors": [
     {
-      "name": "NU PODS",
-      "email": "provost-digital@northeastern.edu"
+      "name": "ITS Web Solutions (Previously NU PODS)",
+      "email": "websolutions@northeastern.edu"
     }
   ],
   "support": {
