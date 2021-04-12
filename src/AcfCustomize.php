@@ -76,8 +76,8 @@ class AcfCustomize
             $extend = new FieldsBuilder('extend');
             $extend->addTab('Extensions')
                 ->addTrueFalse('bool_profiles', ['label' => 'Enable Profiles', 'ui' => 1])
-                ->addTrueFalse('bool_articles', ['label' => 'Enable Articles (knowledgebase)', 'ui' => 1]);
-                // ->addTrueFalse('bool_modules', ['label' => 'Enable Modules', 'ui' => 1]);
+                ->addTrueFalse('bool_articles', ['label' => 'Enable Articles (knowledgebase)', 'ui' => 1])
+                ->addTrueFalse('bool_modules', ['label' => 'Enable Modules', 'ui' => 1]);
 
             $events = new FieldsBuilder('events');
             $events->addTab('Events')

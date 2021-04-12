@@ -29,13 +29,13 @@ class Config
         new Articles;
         new Profiles;
         new Navigation;
-        // new Modules;
+        new Modules;
         new ShortcodeAuth;
         new ShortcodeComponent;
         new ShortcodeIcon;
         new ShortcodeInclude;
         new ShortcodeMailchimp;
-        // new ShortcodeModule;
+        new ShortcodeModule;
         new ShortcodePosts;
         new ShortcodeVideo;
         new ShortcodeWufoo;
