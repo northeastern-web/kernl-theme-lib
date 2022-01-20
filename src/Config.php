@@ -153,9 +153,9 @@ class Config
 
             // echo global elements assets
             echo '
-                <script src="https://unpkg.com/@northeastern-web/global-elements@latest/dist/js/index.umd.js" defer></script>
-                <link rel="stylesheet" href="https://unpkg.com/@northeastern-web/global-elements@latest/dist/css/index.css">
-                <script src="https://unpkg.com/@northeastern-web/kernl-ui@latest/dist/js/index.umd.js" defer></script>
+                <link rel="stylesheet" href="https://global-packages.cdn.northeastern.edu/global-elements/dist/css/index.css">
+                <script src="https://global-packages.cdn.northeastern.edu/global-elements/dist/js/index.umd.js" defer></script>
+                <script src="https://global-packages.cdn.northeastern.edu/kernl-ui/dist/js/index.umd.js" defer></script>
                 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900" rel="stylesheet">
             ';
         }, 1);
