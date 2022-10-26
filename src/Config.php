@@ -144,9 +144,9 @@ class Config
         // wp_head items with priority 1
         add_action('wp_head', function () {
             // Add tag manager Script
-            if (\WP_ENV == 'production') {
+            // if (\WP_ENV == 'production') {
                 echo \Northeastern\Support\Analytics::googleTagManagerScript();
-            }
+            // }
 
             // echo meta head assets
             echo \Northeastern\Support\Meta::head();
@@ -180,9 +180,9 @@ class Config
         // wp_body_open
         add_action('wp_body_open', function () {
             // Add tag manager NoScript
-            if (\WP_ENV == 'production') {
+            // if (\WP_ENV == 'production') {
                 echo \Northeastern\Support\Analytics::googleTagManagerNoScript();
-            }
+            // }
 
             // Add skip to main content
             echo '
@@ -201,8 +201,9 @@ class Config
             echo '<div x-data="NUGlobalElements.footer()" x-init="init()"></div>';
 
             // Add google analytics tracker
-            if (\WP_ENV == 'production' && get_field('txt_analytics', 'option')) {
-                // echo NU::googleAnalytics(get_field('txt_analytics', 'option'));
+            // if (\WP_ENV == 'production' && get_field('txt_analytics', 'option')) {
+            if (get_field('txt_analytics', 'option')) {
+                    echo NU::googleAnalytics(get_field('txt_analytics', 'option'));
             }
         });
     }
