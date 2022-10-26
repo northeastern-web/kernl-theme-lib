@@ -202,9 +202,9 @@ class Config
 
             // Add google analytics tracker
             // if (\WP_ENV == 'production' && get_field('txt_analytics', 'option')) {
-            if (get_field('txt_analytics', 'option')) {
-                    echo NU::googleAnalytics(get_field('txt_analytics', 'option'));
-            }
+            // if (get_field('txt_analytics', 'option')) {
+                   // echo NU::googleAnalytics(get_field('txt_analytics', 'option'));
+            // }
         });
     }
 
